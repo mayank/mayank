@@ -5,20 +5,26 @@
   <link rel="stylesheet" type="text/css" href="css/c-bootstrap.min.css">
   <style type="text/css">
   .f24{ font-size:24px }
-  .mid{ position:absolute; top:50%; left:50%; width:430px; height:220px; margin-left:-215px; margin-top: -130px; color:#eee; }
+  .mid{ position:absolute; top:50%; left:50%; width:330px; height:220px; margin-left:-165px; margin-top: -130px; color:#eee; }
   .bottom a { position: absolute; bottom: 0; left: 50%; width: 200px; margin-left: -100px; color:#ddd; text-decoration:none; }
   .move { margin-left: -9px; }
+  .top { position: absolute; top:4px; }
+  .right { right:0px; }
+  .left { left:0px; }
   </style>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-  <script type="text/javascript" src="js/jquery.min.js">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
-  })
+    $('#level1').fadeIn(500);
+    $('.left').animate({'left':'50%','margin-left':'-28px'},600);
+    $('.right').animate({'right':'50%','margin-right':'-28px'},600);
+  });
   </script>
 </head>
 <body>
-
-   <h1 class="text-center">M<span class="move">M</span></h1>
+<div id="level1" style="display:none">
+   <h1 class="text-center"><span class="top left">M</span><span class="top right" style="top:6px !important">M</span></h1>
   
     <div class="f24 text-center mid">
 	<p>Hi !</p>
@@ -35,6 +41,6 @@
 	<p>&#8675;</p>
       </a>
     </div>
- 
+ </div>
 </body>
 </html>
