@@ -11,6 +11,12 @@
   .top { position: absolute; top:4px; }
   .right { right:0px; }
   .left { left:0px; }
+  .tap > .col-md-3 { height: 300px; background-size: cover; padding:0; }
+  .tap .hx { margin:0; width:100%; height:100%; background: rgba(0,0,0,0.8); padding: 20px; }
+  .hx > p { color: #ccc; font-size: 1.1em; }
+  .hx > hr { border-color:#444 }
+  .pbs{ padding: 30px 0; }
+  div[data-make] { width:100%; position: absolute; bottom:10px;  }
   </style>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -18,11 +24,35 @@
   var _toggle = 0;
   var _color = ['#f00','#0cf'];
   
+  function getUrl(repo,type){
+    return "http://ghbtns.com/github-btn.html?user=nitbscholar&repo="+repo+"&type="+type+"&count=true";
+  }
+  
+  function createButton(bar,type) {
+    clone = $('#copy-me').clone();
+    $(clone).attr('src', getUrl( $(bar).attr('data-make'), type) ).removeClass('hide');
+    $(bar).append(clone);
+  }
+  
   $(document).ready(function(){
     $('#level1').fadeIn(800,function(){ disco(); });
     $('.left').animate({'left':'50%','margin-left':'-28px'},600);
     $('.right').animate({'right':'50%','margin-right':'-28px'},600);
     
+    $('[data-bg]').each(function(){
+	$(this).css({'background-image':'url(img/'+$(this).attr('data-bg')+')'});
+    });
+    
+    $('[data-make]').each(function(){
+	createButton(this,'fork');
+	createButton(this,'watch');
+    });
+    
+    $('[href="#projects"]').click(function(){
+	$('#level1').fadeOut(400,function(){
+	  $('#level2').fadeIn();
+	});
+    });
   });
   
   function disco(){
@@ -54,6 +84,47 @@
 	<p>&#8675;</p>
       </a>
     </div>
+ </div>
+ 
+ 
+ <iframe src="" id="copy-me" class="hide" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="30"></iframe>
+ 
+ 
+ <div id="level2" style="display:none">
+    <div class="row-fluid tap">
+	<div class="col-md-3" data-bg="atom.jpg">
+	  <div class="hx">
+	      <h3 class="text-center">Atomos</h3>
+	      <hr>
+	      <p class="text-center">A Game to play - Made using HTML5 canvas and Kinetic.js, A Canvas Framework</p>
+	      <div class="text-center" data-make="Atomos"></div>
+	   </div>
+	</div>
+	<div class="col-md-3" data-bg="moodle.jpg">
+	    <div class="hx">
+	      <h3 class="text-center">Moodle</h3>
+	      <hr>
+	      <p class="text-center">CMS for maintaining Schools, Colleges with features like Courses, Branches, etc.</p>
+	      <div class="text-center" data-make="moodle"></div>
+	   </div>
+	</div>
+	<div class="col-md-3" data-bg="pickr.jpg">
+	    <div class="hx">
+	      <h3 class="text-center">Pickr</h3>
+	      <hr>
+	      <p class="text-center">A HTML5 and JS based online Image Editor with effects as sepia, threshold, grayscale etc.</p>
+	      <div class="text-center" data-make="Pickr"></div>
+	   </div>
+	</div>
+	<div class="col-md-3" data-bg="swype.png">
+	    <div class="hx">
+	      <h3 class="text-center">Swype</h3>
+	      <hr>
+	      <p class="text-center">Transfer Files with Android Phones by swipe gesture without NFC</p>
+	   </div>
+	</div>
+    </div>
+ 
  </div>
 </body>
 </html>
