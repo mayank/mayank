@@ -15,11 +15,24 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript">
+  var _toggle = 0;
+  var _color = ['#f00','#0cf'];
+  
   $(document).ready(function(){
-    $('#level1').fadeIn(500);
+    $('#level1').fadeIn(800,function(){ disco(); });
     $('.left').animate({'left':'50%','margin-left':'-28px'},600);
     $('.right').animate({'right':'50%','margin-right':'-28px'},600);
+    
   });
+  
+  function disco(){
+    
+    $('.left').css('color', _color[_toggle]);
+    _toggle = 1-_toggle;
+ 
+    setTimeout('disco()',300);
+  }
+  
   </script>
 </head>
 <body>
@@ -34,8 +47,8 @@
 	<p>living in <strong>Noida</strong></p>
     </div>
     
-    <div class="text-center bottom sm">
-      <a href="#projects">
+    <div class="text-center bottom">
+      <a href="#projects" class="sm">
 	<p>Take a Look</p>
 	<p>at <strong>My Projects</strong></p>
 	<p>&#8675;</p>
