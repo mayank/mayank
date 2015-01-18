@@ -11,7 +11,7 @@
   .top { position: absolute; top:4px; }
   .right { right:0px; }
   .left { left:0px; }
-  .tap > .col-md-3 { height: 300px; background-size: cover; padding:0; border-bottom:1px solid #666; }
+  .tap > .col-md-3 { height: 300px; background-size: cover; padding:0; border-bottom:1px solid #666; border-top:1px solid #666; }
   .tap .hx { margin:0; width:100%; height:100%; background: rgba(0,0,0,0.7); padding: 20px; }
   .hx > p { color: #ccc; font-size: 1.1em; }
   .hx > hr { border-color:#444 }
@@ -19,8 +19,11 @@
   div[data-make] { width:100%; position: absolute; bottom:10px;  }
   .xc { margin-top: 18px; }
   #copyme{ display:none }
-  .np { margin-bottom:0; }
+  .np { margin-bottom:0; margin-top:0; }
+  .me { margin: -65px auto 10px auto; display:none; }
   div[data-make] > iframe { margin: 5px;  }
+  .bdr{ border-bottom: 3px solid #282828; }
+  .progress-bar { font-size: 14px; font-weight:bold; padding-left:5px; text-align:left; }
   </style>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -74,11 +77,16 @@
 	createButton(this,'watch');
     });
     
-    $('[href="#projects"]').click(function(){
+//    $('[href="#projects"]').click(function(){
 	$('#level1').fadeOut(400,function(){
-	  $('#level2').fadeIn();
+	  $('#level2').fadeIn(600,function(){
+	      $('.me').slideDown(500);
+	  });
+	  
 	});
-    });
+  //  });
+    
+
   });
   
   function disco(){
@@ -105,9 +113,8 @@
     
     <div class="text-center bottom">
       <a href="#projects" class="sm">
-	<p>Take a Look</p>
-	<p>at <strong>My Projects</strong></p>
-	<p>&#8675;</p>
+	<p>Get to Know Me</p>
+	<p><strong>&#8675;</strong></p>
       </a>
     </div>
  </div>
@@ -115,13 +122,31 @@
 <a id="copyme" data-count-href="/nitbscholar/moodle/network" data-count api=""></a>
  
  <div id="level2" style="display:none">
-  
+  <div class="jumbotron np">
     <div class="row-fluid">
-	<div class="jumbotron np">
-	  <h1 class="text-center">My Projects<span class="text-info">_</span></h1>
-	  <p class="text-center">What I've done the last few years.<p>
+	<div class="col-sm-6 col-sm-offset-3">
+	    <h3 class="text-center">I'm so happy you're visiting <strong class="text-danger">__</strong></h3>
+	    <br><br>
+	    <p class="text-center">I designed this site so you can get to know me on a personal level. My career as a web developer, my work, my favorite 	quotes, and so much more. <span class="text-warning">So please sit back and enjoy!</span>
+	    </p>
+	    <br><br><br><br>
 	</div>
     </div>
+    
+    <div class="clearfix bdr"></div>
+    
+    
+    <div class="me text-center">
+	<img src="img/woohoo.jpg" width="130px" class="img-thumbnail img-circle">
+    </div>
+    
+    <br><br>
+    
+    <div class="row-fluid">
+	<h2 class="text-center">My Projects<span class="text-info">_</span></h2>
+	<p class="text-center">What I've done the last few years.<p>
+    </div>
+  </div>
  
     <div class="row-fluid tap">
 	<div class="col-md-3" data-bg="atomxa.jpg">
@@ -177,6 +202,48 @@
 	   </div>
 	</div>
     </div>
+    
+    <div class="clearfix"></div>
+    
+    <div class="jumbotron np">
+      <div class="row-fluid">
+	<h2 class="text-center">What I offer<span class="text-info">_</span></h2>
+	<p class="text-center">These are the skills I'm most proud of<p>
+      </div>
+    </div>
+    <div class="jumbotron np">
+      <div class="row-fluid">
+	    <div class="col-md-4 col-sm-offset-2">
+		  <h4 class="text-center">Let's Get Technical <strong class="text-danger">__</strong></h4>
+		  <p class="text-center"><small>My interest in design started as a teenager, learning to code C in Notepad. I sharpened these skills while attending NIT by learning the fundamentals and principles of programming. Over the last four years, I've shifted focus to Web Development. Whether I'm wireframing, prototyping, the field combines my love of psychology with my passion for code.</small>
+		  <br><br>
+		  <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-save"></span>&nbsp;&nbsp;&nbsp;Download My Resume</a>
+		  </p>
+	    </div>
+	    <div class="col-md-4">
+	    <br><br>
+	    <div class="progress">
+	      <div class="progress-bar progress-bar-info" style="width: 85%;">PHP / Apache / Symfony2 / Laravel</div>
+	    </div>
+	    <div class="progress">
+	      <div class="progress-bar progress-bar-warning" style="width: 72%;">Java / Android </div>
+	    </div>
+	    <div class="progress">
+	      <div class="progress-bar progress-bar-danger" style="width: 80%;">MySQL / MongoDB</div>
+	    </div>
+	    <div class="progress">
+	      <div class="progress-bar" style="width: 69%;">C Programming</div>
+	    </div>
+	    <div class="progress">
+	      <div class="progress-bar progress-bar-success" style="width: 89%;">Javascript / jQuery / JS Frameworks</div>
+	    </div>
+	    </div>
+	    
+	    <div class="clearfix"></div>
+	   
+      </div>
+    </div>
+  </div>
  
  </div>
  <!-- Place this tag right after the last button or just before your close body tag. -->
