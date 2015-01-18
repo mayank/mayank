@@ -24,6 +24,13 @@
   div[data-make] > iframe { margin: 5px;  }
   .bdr{ border-bottom: 3px solid #282828; }
   .progress-bar { font-size: 14px; font-weight:bold; padding-left:5px; text-align:left; }
+  .progress { text-align:right; color:#ddd; padding-right: 5px; } 
+  .ig-b- { display: inline-block; }
+.ig-b- img { visibility: hidden; }
+.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+.ig-b-v-24 { width: 137px; height: 24px; background: url(http://badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+.ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }
   </style>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -77,14 +84,14 @@
 	createButton(this,'watch');
     });
     
-    $('[href="#projects"]').click(function(){
+    //$('[href="#projects"]').click(function(){
 	$('#level1').fadeOut(400,function(){
 	  $('#level2').fadeIn(600,function(){
 	      $('.me').slideDown(500);
 	  });
 	  
 	});
-    });
+    //});
     
 
   });
@@ -224,24 +231,38 @@
 	    <br><br>
 	    <div class="progress">
 	      <div class="progress-bar progress-bar-info" style="width: 85%;">PHP / Apache / Symfony2 / Laravel</div>
+	      8.5
 	    </div>
 	    <div class="progress">
 	      <div class="progress-bar progress-bar-warning" style="width: 72%;">Java / Android </div>
+	      7.2
 	    </div>
 	    <div class="progress">
 	      <div class="progress-bar progress-bar-danger" style="width: 80%;">MySQL / MongoDB</div>
+	      8.0
 	    </div>
 	    <div class="progress">
 	      <div class="progress-bar" style="width: 69%;">C Programming</div>
+	      6.9
 	    </div>
 	    <div class="progress">
 	      <div class="progress-bar progress-bar-success" style="width: 89%;">Javascript / jQuery / JS Frameworks</div>
+	      8.9
 	    </div>
 	    </div>
 	    
 	    <div class="clearfix"></div>
 	   
       </div>
+    </div>
+    <div class="jumbotron np">
+     <div class="row-fluid">
+	<h2 class="text-center">I enjoy snapping pics<span class="text-info">_</span></h2>
+	<p class="text-center">Just a Hobby of mine. 
+	<br><br>
+	<a href="http://instagram.com/mishra_mayank?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+<p>
+     </div>
     </div>
   </div>
  
