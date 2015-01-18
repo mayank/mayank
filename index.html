@@ -17,20 +17,45 @@
   .hx > hr { border-color:#444 }
   .pbs{ padding: 30px 0; }
   div[data-make] { width:100%; position: absolute; bottom:10px;  }
+  .xc { margin-top: 18px; }
+  #copyme{ display:none }
+  div[data-make] > iframe { margin: 5px;  }
   </style>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript">
   var _toggle = 0;
   var _color = ['#f00','#0cf'];
+  var _icons = {
+      'fork':'octicon-git-branch', 
+      'star':'octicon-star', 
+      'watch':'octicon-eye', 
+      'download':'octicon-cloud-download'
+  };
+  var _counter = {
+      'fork':'network',
+      'watch':'watchers'
+  };
+  var _api = {
+      'fork':'forks_count',
+      'watch':'subscribers_count'
+  };
   
   function getUrl(repo,type){
-    return "http://ghbtns.com/github-btn.html?user=nitbscholar&repo="+repo+"&type="+type+"&count=true";
+    return "http://github.com/nitbscholar/";
   }
   
   function createButton(bar,type) {
-    clone = $('#copy-me').clone();
-    $(clone).attr('src', getUrl( $(bar).attr('data-make'), type) ).removeClass('hide');
+    clone = $('#copyme').clone();
+    name = $(bar).attr('data-make');
+    $(clone).attr('href', getUrl()+name)
+	.removeClass('hide')
+	.addClass('github-button')
+	.removeAttr('id')
+	.html(type)
+	.attr('data-icon', _icons[type])
+	.attr('data-count-href', 'nitbscholar/'+name+'/'+_counter[type])
+	.attr('data-count-api', '/repos/nitbscholar/'+name+'#'+_api[type]);
     $(bar).append(clone);
   }
   
@@ -85,10 +110,8 @@
       </a>
     </div>
  </div>
- 
- 
- <iframe src="" id="copy-me" class="hide" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="30"></iframe>
- 
+
+<a id="copyme" data-count-href="/nitbscholar/moodle/network" data-count api=""></a>
  
  <div id="level2" style="display:none">
     <div class="row-fluid tap">
@@ -97,6 +120,11 @@
 	      <h3 class="text-center">Atomos</h3>
 	      <hr>
 	      <p class="text-center">A Game to play - Made using HTML5 canvas and Kinetic.js, A Canvas Framework</p>
+	      <div class="xc text-center">
+		  <span class="label label-info">HTML5</span>
+		  <span class="label label-danger">Kinetic.js</span>
+		  <span class="label label-success">Node.js</span>
+	      </div>
 	      <div class="text-center" data-make="Atomos"></div>
 	   </div>
 	</div>
@@ -105,6 +133,12 @@
 	      <h3 class="text-center">Moodle</h3>
 	      <hr>
 	      <p class="text-center">CMS for maintaining Schools, Colleges with features like Courses, Branches, etc.</p>
+	      <div class="xc text-center">
+		  <span class="label label-success">PHP</span>
+		  <span class="label label-danger">MySQL</span>
+		  <span class="label label-info">Laravel</span>
+		  <span class="label label-warning">Bootstrap</span>
+	      </div>
 	      <div class="text-center" data-make="moodle"></div>
 	   </div>
 	</div>
@@ -112,7 +146,12 @@
 	    <div class="hx">
 	      <h3 class="text-center">Pickr</h3>
 	      <hr>
-	      <p class="text-center">A HTML5 and JS based online Image Editor with effects as sepia, threshold, grayscale etc.</p>
+	      <p class="text-center">A HTML5 and JS based Online Image Editor with effects as sepia, grayscale etc.</p>
+	      <div class="xc text-center">
+		  <span class="label label-info">HTML5</span>
+		  <span class="label label-warning">Canvas</span>
+		  <span class="label label-success">Javascript</span>
+	      </div>
 	      <div class="text-center" data-make="Pickr"></div>
 	   </div>
 	</div>
@@ -121,10 +160,17 @@
 	      <h3 class="text-center">Swype</h3>
 	      <hr>
 	      <p class="text-center">Transfer Files with Android Phones by swipe gesture without NFC</p>
+	      <div class="xc text-center">
+		  <span class="label label-success">Java Sockets</span>
+		  <span class="label label-warning">Android</span>
+		  <span class="label label-default">C++</span>
+	      </div>
 	   </div>
 	</div>
     </div>
  
  </div>
+ <!-- Place this tag right after the last button or just before your close body tag. -->
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
