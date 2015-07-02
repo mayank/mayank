@@ -23,17 +23,27 @@
   .xc { margin-top: 18px; }
   #copyme{ display:none }
   .np { margin-bottom:0; margin-top:0; }
+  .nc { padding:0; }
   .me { margin: -65px auto 10px auto; display:none; }
   div[data-make] > iframe { margin: 5px;  }
   .bdr{ border-bottom: 3px solid #282828; }
   .progress-bar { font-size: 14px; font-weight:bold; padding-left:5px; text-align:left; }
-  .progress { text-align:right; color:#ddd; padding-right: 5px; } 
+  .progress { text-align:right; color:#ddd; padding-right: 5px; }
   .ig-b- { display: inline-block; }
 .ig-b- img { visibility: hidden; }
 .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
 .ig-b-v-24 { width: 137px; height: 24px; background: url(http://badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-.ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } .slip{background-position-x: -650px;} }
+.ig-b-v-24 { 
+	background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; 
+}
+	 .slip{ 
+	  background-attachment: initial !important;
+	  background-position: -344px 0px !important;
+	  background-repeat: no-repeat;
+	}
+	 
+ }
 .heavy{ display:none; font-size:5em; margin-left:-30px; margin-top:20px; }
  </style>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
@@ -42,9 +52,9 @@
   var _toggle = 0;
   var _color = ['#f00','#0cf'];
   var _icons = {
-      'fork':'octicon-git-branch', 
-      'star':'octicon-star', 
-      'watch':'octicon-eye', 
+      'fork':'octicon-git-branch',
+      'star':'octicon-star',
+      'watch':'octicon-eye',
       'download':'octicon-cloud-download'
   };
   var _counter = {
@@ -55,11 +65,11 @@
       'fork':'forks_count',
       'watch':'subscribers_count'
   };
-  
+
   function getUrl(repo,type){
     return "http://github.com/mayank.g/";
   }
-  
+
   function createButton(bar,type) {
     clone = $('#copyme').clone();
     name = $(bar).attr('data-make');
@@ -73,30 +83,30 @@
 	.attr('data-count-api', '/repos/mayank.g/'+name+'#'+_api[type]);
     $(bar).append(clone);
   }
-  
+
   $(document).ready(function(){
     $('#level1').fadeIn(800,function(){ disco(); });
     $('.left').animate({'left':'50%','margin-left':'-28px'},600);
     $('.right').animate({'right':'50%','margin-right':'-28px'},600);
-    
+
     $('[data-bg]').each(function(){
 	$(this).css({'background-image':'url(img/'+$(this).attr('data-bg')+')'});
     });
-    
+
     $('[data-make]').each(function(){
 	createButton(this,'fork');
 	createButton(this,'watch');
     });
-    
+
     $('[href="#projects"]').click(function(){
 	$('#level1').fadeOut(400,function(){
 	  $('#level2').fadeIn(600,function(){
 	      $('.me').slideDown(500);
 	  });
-	  
+
 	});
     });
-   
+
      $('#send').click(function(){
 	$('#yolo').slideUp(function(){
 	    var move = $(window).width();
@@ -111,24 +121,24 @@
 		$('#yolo').fadeIn(200);
 	    });
 	});
-     }); 
+     });
 
   });
-  
+
   function disco(){
-    
+
     $('.left').css('color', _color[_toggle]);
     _toggle = 1-_toggle;
- 
+
     setTimeout('disco()',300);
   }
-  
+
   </script>
 </head>
 <body>
 <div id="level1" style="display:none">
    <h1 class="text-center"><span class="top left">M</span><span class="top right" style="top:6px !important">M</span></h1>
-  
+
     <div class="f24 text-center mid">
 	<p>Hi !</p>
 	<p>I'm <strong>Mayank Mishra,</strong></p>
@@ -136,7 +146,7 @@
 	<p>studied at <strong>NIT Bhopal</strong></p>
 	<p>living in <strong>Noida</strong></p>
     </div>
-    
+
     <div class="text-center bottom">
       <a href="#projects" class="sm">
 	<p>Get to Know Me</p>
@@ -146,7 +156,7 @@
  </div>
 
 <a id="copyme" data-count-href="/mayank.g/moodle/network" data-count api=""></a>
- 
+
  <div id="level2" style="display:none">
   <div class="jumbotron np">
     <div class="row-fluid">
@@ -158,23 +168,22 @@
 	    <br><br><br><br>
 	</div>
     </div>
-    
+
     <div class="clearfix bdr"></div>
-    
-    
+
     <div class="me text-center">
 	<img src="img/woohoo.jpg" width="130px" class="img-thumbnail img-circle">
     </div>
-    
+
     <br><br>
-    
+
     <div class="row-fluid">
 	<h2 class="text-center">My Projects<span class="text-info">_</span></h2>
 	<p class="text-center">What I've done the last few years.<p>
     </div>
   </div>
- 
-    <div class="row-fluid tap">
+
+    <div class="row-fluid tap modal-open">
 	<div class="col-md-3" data-bg="atomxa.jpg">
 	  <div class="hx">
 	      <h3 class="text-center">Atomos</h3>
@@ -228,9 +237,9 @@
 	   </div>
 	</div>
     </div>
-    
+
     <div class="clearfix"></div>
-    
+
     <div class="jumbotron np">
       <div class="row-fluid">
 	<h2 class="text-center">What I offer<span class="text-info">_</span></h2>
@@ -269,22 +278,22 @@
 	      8.9
 	    </div>
 	    </div>
-	    
+
 	    <div class="clearfix"></div>
-	   
+
       </div>
     </div>
     <div class="jumbotron np">
      <div class="row-fluid">
 	<h2 class="text-center">I enjoy snapping pics<span class="text-danger">_</span></h2>
-	<p class="text-center">Just a Hobby of mine. 
+	<p class="text-center">Just a Hobby of mine.
 	<br><br>
 	<a href="http://instagram.com/mishra_mayank?ref=badge" target="_blank" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
 <p>
      </div>
   </div>
 
-	<div class="jumbotron np">
+	<div class="jumbotron np nc">
 		<div class="row-fluid slip">
 		<div class="pdt">
 			<h2 class="text-center">Biking gives me adrenaline <span class="text-info">_</span></h2>
