@@ -3,13 +3,13 @@
     "name": "Mayank",
     "icons": [
       {
-        "src": "/images/200x200.jpg",
-        "type": "image/png",
+        "src": "/img/200x200.jpg",
+        "type": "image/jpg",
         "sizes": "192x192"
       },
       {
-        "src": "/images/200x200.jpg",
-        "type": "image/png",
+        "src": "/img/200x200.jpg",
+        "type": "image/jpg",
         "sizes": "512x512"
       }
     ],
