@@ -1,0 +1,21 @@
+{
+    "short_name": "Mayank Mishra",
+    "name": "Mayank",
+    "icons": [
+      {
+        "src": "/images/200x200.jpg",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/200x200.jpg",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#0000",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#0000"
+  }
