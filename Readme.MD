@@ -7,8 +7,8 @@
 
 ### Connect
 
-[![Linkedin Badge](https://img.shields.io/badge/-mayank2103-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mayank2103/)](https://www.linkedin.com/in/imalisiddique/)
-[![Instagram Badge](https://img.shields.io/badge/-mishra_mayank-purple?style=flat-square&logo=instagram&logoColor=white&link=https://instagram.com/mishra_mayank/)](https://instagram.com/imalisiddique)
+[![Linkedin Badge](https://img.shields.io/badge/-mayank2103-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mayank2103/)](https://www.linkedin.com/in/mayank2103/)
+[![Instagram Badge](https://img.shields.io/badge/-mishra_mayank-purple?style=flat-square&logo=instagram&logoColor=white&link=https://instagram.com/mishra_mayank/)](https://instagram.com/mishra_mayank)
 [![Gmail Badge](https://img.shields.io/badge/-mayank@shoplyft.io-010101?style=flat-square&logo=Gmail&logoColor=white&link=mailto:imalisiddique@gmail.com)](mailto:mayank@shoplyft.io)
 
 ### Technologies
