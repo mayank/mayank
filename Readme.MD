@@ -31,3 +31,6 @@
 ![Slack](https://img.shields.io/badge/-Slack-black?style=flat-square&logo=slack)
 ![visualstudiocode](https://img.shields.io/badge/-VScode-black?style=flat-square&logo=visualstudiocode)
 ![NestJS](https://img.shields.io/badge/-NestJS-black?style=flat-square&logo=nestjs)
+
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=mayank&show_icons=true" alt="mayank" /></p>
