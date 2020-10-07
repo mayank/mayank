@@ -37,12 +37,12 @@
   <tr>
       <td>
         <a href="https://github.com/mayank">
-          <img width="400px" align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mayank&hide=html&layout=compact&langs_count=11" />
+          <img width="390px" align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mayank&hide=html&layout=compact&langs_count=11" />
          </a>
       </td>
       <td>
         <a href="https://github.com/mayank">
-          <img width="495px" align="left" src="https://github-readme-stats.vercel.app/api?username=mayank&theme=default&count_private=true&show_icons=true&hide=stars" />
+          <img width="480px" align="left" src="https://github-readme-stats.vercel.app/api?username=mayank&theme=default&count_private=true&show_icons=true&hide=stars" />
         </a>
     </td>
   </tr>   
