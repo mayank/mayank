@@ -32,5 +32,19 @@
 ![visualstudiocode](https://img.shields.io/badge/-VScode-black?style=flat-square&logo=visualstudiocode)
 ![NestJS](https://img.shields.io/badge/-NestJS-black?style=flat-square&logo=nestjs)
 
-
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=mayank&show_icons=true" alt="mayank" /></p>
+<center>
+<table>
+  <tr>
+      <td>
+        <a href="https://github.com/mayank">
+          <img width="400px" align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mayank&hide=html&layout=compact&langs_count=11" />
+         </a>
+      </td>
+      <td>
+        <a href="https://github.com/mayank">
+          <img width="495px" align="left" src="https://github-readme-stats.vercel.app/api?username=mayank&theme=default&count_private=true&show_icons=true&hide=stars" />
+        </a>
+    </td>
+  </tr>   
+</table>
+</center>
