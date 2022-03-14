@@ -1,9 +1,8 @@
 <h1 align="center">Hi 👋, I'm Mayank Mishra</h1>
-<h3 align="center">Just Another Full Stack Guy</h3>
 
-- 🔭 I’m currently working on **[ShopLyft](https://shoplyft.io)**
+- 🔭 I’m currently working on **[Grabbd](https://grabbd.com/)**
 
-- 📫 How to reach me **mayank@shoplyft.io**
+- 📫 How to reach me **mayank@grabbd.com**
 
 ### Connect
 
