@@ -1,14 +1,14 @@
 <h1 align="center">Hi 👋, I'm Mayank Mishra</h1>
 
-- 🔭 I’m currently working on **[Grabbd](https://grabbd.com/)**
+- 🔭 Leading Engineering @**[UrbanPiper](https://www.urbanpiper.com/)**
 
-- 📫 How to reach me **mayank@grabbd.com**
+- 📫 How to reach me **nitb.scholar@gmail.com**
 
 ### Connect
 
 [![Linkedin Badge](https://img.shields.io/badge/-mayank2103-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mayank2103/)](https://www.linkedin.com/in/mayank2103/)
 [![Instagram Badge](https://img.shields.io/badge/-mishra_mayank-purple?style=flat-square&logo=instagram&logoColor=white&link=https://instagram.com/mishra_mayank/)](https://instagram.com/mishra_mayank)
-[![Gmail Badge](https://img.shields.io/badge/-mayank@shoplyft.io-010101?style=flat-square&logo=Gmail&logoColor=white&link=mailto:imalisiddique@gmail.com)](mailto:mayank@shoplyft.io)
+[![Gmail Badge](https://img.shields.io/badge/-nitb.scholar@gmail.com-010101?style=flat-square&logo=Gmail&logoColor=white&link=mailto:nitb.scholar@gmail.com)](nitb.scholar@gmail.com)
 
 ### Technologies
 
