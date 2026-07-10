@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm Mayank Mishra</h1>
 
-- 🔭 Engineering Manager @**[UrbanPiper](https://www.urbanpiper.com/)**
+- 🔭 Staff Engineer @**[Atlassian](https://www.atlassian.com/#teamwork)**
 
 - 📫 How to reach me **nitb.scholar@gmail.com**
 
